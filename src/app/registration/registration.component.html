@@ -1,0 +1,179 @@
+<div class="popup" >
+    <div class="popup-inner">
+  
+  <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+    <!-- Name -->
+  <div class="register">
+  <h1 >Register</h1>
+  
+    <p><a href=""><i class="fas fa-times"></i></a> </p>
+  
+  </div>
+  <div class="form-n">
+   
+  </div>
+
+  <div class="form-contain">
+    <div class="form-pic">
+  
+  
+       
+     <img [src]="randomImageUrl" id="imgs" alt="Random Image" *ngIf="!imageUrl" >
+       <br><br>
+      <div class="image-container" *ngIf="imageUrl" >
+         <img [src]="imageUrl"  alt="Uploaded Image" width="100" height="100">
+      </div>
+        <!-- <input type="file" class="uploadp" (change)="onFileSelected($event)"> -->
+
+        <label for="file-upload" class="custom-file-upload">Upload Your Image</label>
+         <input id="file-upload" type="file" style="display:none;" (change)="onFileSelected($event)">
+  
+ </div>
+  <div class="form-data">
+    <div class="form-n">
+    <div class="form-info" >
+     
+      <input type="text" id="name" formControlName="name" class="form-control" placeholder="First Name" maxlength="20">
+    
+       <div *ngIf="myForm.get('name').invalid && (myForm.get('name').dirty || myForm.get('name').touched)">
+      <small  *ngIf="myForm.get('name').errors.required">FirstName is required</small>
+  
+      
+       </div>
+    </div>
+  
+    <div class="form-info">
+    
+         <input type="text" id="name1" formControlName="name" class="form" placeholder="Last Name">
+      <div *ngIf="myForm.get('name').invalid && (myForm.get('name').dirty || myForm.get('name').touched)">
+          <small class="text-danger" *ngIf="myForm.get('name').errors.required">LastName is required</small>
+      </div>
+    </div>
+  </div>
+
+   <br>
+    <!-- Email -->
+    <div class="form-info">
+     
+      <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email">
+      <div *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)">
+        <small *ngIf="myForm.get('email').errors.required">Email is required</small>
+        <small *ngIf="myForm.get('email').errors.email">Invalid email format</small>
+      </div>
+    </div>
+  <br>
+    <!-- Telephone Number -->
+    <div class="form-info">
+     
+      <input type="tel" id="telephone" formControlName="telephone" class="form-control" placeholder="(567) 858-8798">
+      <div *ngIf="myForm.get('telephone').invalid && (myForm.get('telephone').dirty || myForm.get('telephone').touched)">
+        <small  *ngIf="myForm.get('telephone').errors.required">Telephone number is required</small>
+      </div>
+    </div>
+    <!-- Age (using range slider) -->
+    <div class="form-info">
+
+      <label for="age" style=" float: left; color: gray; padding-right: 10px; padding-bottom: 10px;">Age</label>
+      <input type="range" name="age" id="age" formControlName="age" class="form-control-range" min="18" max="60" step="1" value="50" >
+      <output class="ageoutput" for="age"></output>
+      <!-- <label for="age" style="color: black; float: left;">Age</label>
+    <input type="range" id="age" formControlName="age" class="form-control-range" min="18" max="60" width="30%"> -->
+      
+      <div *ngIf="myForm.get('age').invalid && (myForm.get('age').dirty || myForm.get('age').touched)">
+        <small  *ngIf="myForm.get('age').errors.required">{{age}}Age is required</small>
+      </div>
+    </div>
+  
+    
+     <div class="form-info">
+      
+      <input type="text" id="homeAddress" formControlName="homeAddress" class="form-control" placeholder="homeAddress">
+    </div>
+    <br>
+  
+    <div class="form-info">
+      
+      <input type="text" id="companyAddress" formControlName="companyAddress" class="form-control" placeholder="companyAddress">
+    </div>
+    <br>
+    <div class="form-info">
+      <select name="text" id="state" formControlName="state" class="form-control">
+      <option value="">State</option>
+      <option value="m">Maharashtra</option>
+      <option value="u">Uttar Pardesh</option>
+      <option value="g">Gujrat</option>
+      <option value="a">Asam</option>
+      <option value="b">Bihar</option>
+    </select>
+  
+    </div> 
+    <br>
+  
+    <div class="form-info"> 
+      <select name="text" id="country" formControlName="country" class="form-control">
+        <option value="">country</option>
+        <option value="India">India</option>
+        <option value="Albania">Albania</option>
+        <option value="Algeria">Algeria</option>
+        <option value="American Samoa">American Samoa</option>
+        <option value="Andorra">Andorra</option>
+        <option value="Angola">Angola</option>
+        <option value="Anguilla">Anguilla</option>
+        <option value="Antarctica">Antarctica</option>
+        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Armenia">Armenia</option>
+        <option value="Aruba">Aruba</option>
+        <option value="Australia">Australia</option>
+        <option value="Austria">Austria</option>
+        <option value="Azerbaijan">Azerbaijan</option>
+        </select>
+    </div>
+    <br>
+   
+    <div class="form-info">
+      <input type="text" id="tags" formControlName="tags" class="form-control" placeholder="tags">
+    </div>
+
+
+    <fieldset>
+      <legend>Select what topics you're into</legend>
+      <label class="control" for="technology">
+        <input type="checkbox" name="topics" id="technology">
+        <span class="control__content">
+          <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="15" fill="#1E1B1D"></circle><path d="M10.78 21h1.73l.73-3.2h2.24l-.74 3.2h1.76l.72-3.2h3.3v-1.6H17.6l.54-2.4H21v-1.6h-2.5l.72-3.2h-1.73l-.73 3.2h-2.24l.74-3.2H13.5l-.73 3.2H9.5v1.6h2.93l-.56 2.4H9v1.6h2.52l-.74 3.2zm2.83-4.8l.54-2.4h2.24l-.54 2.4H13.6z" fill="#fff"></path></svg>
+          Technology
+        </span>
+      </label>
+      <label class="control" for="health">
+        <input type="checkbox" name="topics" id="health">
+        <span class="control__content">
+          <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="15" fill="#1E1B1D"></circle><path d="M10.78 21h1.73l.73-3.2h2.24l-.74 3.2h1.76l.72-3.2h3.3v-1.6H17.6l.54-2.4H21v-1.6h-2.5l.72-3.2h-1.73l-.73 3.2h-2.24l.74-3.2H13.5l-.73 3.2H9.5v1.6h2.93l-.56 2.4H9v1.6h2.52l-.74 3.2zm2.83-4.8l.54-2.4h2.24l-.54 2.4H13.6z" fill="#fff"></path></svg>
+          Health
+        </span>
+      </label>
+      <label class="control" name="science">
+        <input type="checkbox" name="topics" id="science">
+        <span class="control__content">
+          <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="15" fill="#1E1B1D"></circle><path d="M10.78 21h1.73l.73-3.2h2.24l-.74 3.2h1.76l.72-3.2h3.3v-1.6H17.6l.54-2.4H21v-1.6h-2.5l.72-3.2h-1.73l-.73 3.2h-2.24l.74-3.2H13.5l-.73 3.2H9.5v1.6h2.93l-.56 2.4H9v1.6h2.52l-.74 3.2zm2.83-4.8l.54-2.4h2.24l-.54 2.4H13.6z" fill="#fff"></path></svg>
+             Science
+        </span>
+      </label>
+    </fieldset>
+   <br>
+    <div class="form-btn">
+
+      <button type="reset" class="Cancel" (click)="closePopup()">Cancel</button>
+  
+      <button type="submit" class="sub" >Submit</button>
+    <br><br><br>
+  </div>
+  </div>
+  </div>
+  </form>
+  
+  </div>
+
+
+  </div>
+  

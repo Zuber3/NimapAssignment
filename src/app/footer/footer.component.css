@@ -1,0 +1,42 @@
+.footer {
+    background-color: #040111;
+    color: #fff;
+
+    height: 250px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .email-form {
+    text-align: center;
+  }
+  
+  .email-input {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+   
+    padding: 7px;
+    border: 2px solid #077ad2;
+
+  }
+  .email-input input{
+    background-color: #040111;
+    border: none;
+  }
+  .email-input i {
+    margin: 10px;
+    color: #fff;
+  }
+  
+  input {
+    padding: 8px;
+    font-size: 14px;
+   
+    border-radius: 4px;
+    margin-right: 5px;
+
+  }
+  

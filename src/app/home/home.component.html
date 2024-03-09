@@ -1,0 +1,88 @@
+<div class="home">
+    <div class="main-contain">
+        <app-header></app-header>
+        <form>
+       <div class="job-form">
+        <p>I"m looking for..</p>
+      
+            <div class="job-input">
+                <input type="text" placeholder="Enter a Job Description">
+                <button class="search-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+           <div class="job-type">
+            <div class="job-info">
+                <input type="checkbox" name="job-type"> Full Time
+                <input type="checkbox" name="job-type"> Part Time / Casual / Freelance
+            </div>
+                <div class="seacrch-location">
+                    <select id="loacation" name="location">
+                        <option value="Select Your loacation" class="sel">Select your Location</option>
+                        <option value="Select Your loacation">Pune</option>
+                        <option value="Select Your loacation">Mumbai</option>
+                        <option value="Select Your loacation">Nagpur</option>    
+                      </select>
+                
+            </div>
+            
+           </div>
+    
+           <div class="register">
+            <button class="register-btn" (click)="openPopup()">Register</button>
+            <app-registration *ngIf="isPopupVisible"></app-registration> 
+           </div>
+    </div>
+    </form>  
+    </div>
+    
+    <div class="information">
+        <div class="info-title">
+            <p>We're leaders in</p>
+            <span>Creative Digital Recruitment</span>
+        </div>
+        <br>
+        <br>
+        <div class="bdr"></div>
+        <br>
+        <br>
+        <div class="data">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis molestiae odit amet. Vel reiciendis a sequi quae eius quibusdam illo?
+        </div>
+        <br>
+        <br>
+        <button class="find-btn">FIND OUT MORE ABOUT US</button>
+    </div>
+    <app-footer></app-footer>
+    <br>
+    <br><br>
+    <div class="email-box">
+        <i class="fas fa-envelope"></i>  
+    <input type="email" placeholder="Enter Your Email Address" />
+    </div>
+    
+    <div class="foot">a
+        <div class="copyright">
+            <p>Copyright &#64; 2014 Two Bytes Consulting Terms & Policies</p>
+        </div>
+        <div class="social-media">
+           
+            <div class="fb" class="btn btn-primary"><i class="fab fa-facebook" style="color: #0d97d3;"></i>
+               
+                    <i class="far fa-thumbs-up #0d97d3"></i>
+               
+                <i class="fab fa-twitter" style="color: #0d97d3;"></i>
+    
+                <i class="far fa-thumbs-up" style="color: #0d97d3;"></i>
+    
+            </div>
+    
+    
+          
+        </div>
+    
+    </div>
+    
+    </div>
+    
+        
+    
+    

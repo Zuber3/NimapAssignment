@@ -1,0 +1,152 @@
+
+  
+  .home{
+    background-color: #f5f3f3;
+}
+.main-contain{
+    width: 100%;
+    color: white;
+    height: 550px;
+    
+    background-image: url("https://wallpapers.com/images/hd/sekiro-shadows-die-twice-red-moon-tdrwfiisb2y3pym7.webp");
+  
+    background-size: cover;
+    
+
+}
+.job-form{
+    width: 88%;
+    margin-left: 5%;
+    margin-top: 10%
+
+}
+.job-form p{
+    margin-left: 58px;
+    font-size: 40px;
+}
+
+
+.job-input{
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.job-input input {
+    width: 73%;
+    padding: 10px;
+}
+.search-btn{
+    padding: 10px 20px;
+    border: none;
+    background-color: #3088bf;
+    color: #fff;
+}
+.job-type{
+    display: flex;
+    margin: 20px;
+    
+}
+.job-info {
+    width: 62%;
+    margin-left: 25px;
+}
+  
+/* .select-location{
+    margin-left: 50%;
+    
+} */
+.seacrch-location select {
+    width: 145px;
+    height: 40px;
+   color: gray;
+}
+.register-btn{
+    text-align: center;
+   
+}
+.register {
+    text-align: center;
+   
+}
+.register-btn {
+   width: 140px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #11ace0; 
+    color: white; 
+    border-radius: 5px;
+    box-shadow: 1px ;
+    cursor: pointer;
+}
+
+.information{
+    text-align: center;
+   
+}
+.info-title p{
+    font-size: 2rem;
+    opacity: 0.9;
+}
+.info-title span{
+    font-size: 3rem;
+    
+}
+.bdr{
+    width: 5%;
+    margin-left: 47%;
+    border: 2px solid #11ace0;
+}
+.data {
+    width: 50%;
+    margin-left: 25%;
+}
+.find-btn{
+    padding: 15px 30px;
+    color: #11ace0;
+    border: 1px solid #11ace0;
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+.email-box{
+    margin-left: 7%;
+}
+.copyright p{
+    margin-left: 7%;
+   
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+}
+.num {
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #11ace0;
+    background-color: #fff;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+}
+.copyright{
+    margin-left: 5rem;
+}
+.social-media {
+    margin-right: 11rem;
+}
+.social-media i{
+    margin: 10px;
+}

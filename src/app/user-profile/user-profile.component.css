@@ -1,0 +1,53 @@
+
+.profile-header{
+    background-color: #099cd5;
+}
+h1{
+    color: #db2f00;
+    
+}
+h2{
+    color: #099cd5;
+}
+.editing-info-prof{
+    display: flex;
+    justify-content: space-evenly;
+    height: 600px;
+}
+
+.edit-p button{
+    margin-top: 5px;
+    padding: 10px 15px;
+    background-color: #e8b10b;
+    margin-right: 10px;    
+    border: 1px solid #fff;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.edit-p{
+    border: 1px solid #fff;
+    margin-left: 15rem;
+
+}
+
+.edit-btn button{
+    margin-left: 6rem;
+   
+   
+}
+.agree-info{
+   
+    margin:  3rem 10rem 0 5rem;
+}
+.agree-info p{
+    width: 60%;
+}
+.agree-btn button{
+    padding: 10px;
+    width: 130px;
+    margin: 30px;
+    background-color: rgb(1, 173, 1);
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}

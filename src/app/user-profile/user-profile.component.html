@@ -1,0 +1,56 @@
+
+<div class="profile-header">
+    <app-header></app-header>
+</div>
+
+<div class="editing-info-prof">
+  <div class="edit-p" style="width: 20%;">
+    <div *ngIf="!editMode">
+      <h2>Profile</h2>
+      <img [src]="user.photoUrl" alt="User Photo" width="250px" height="230px">
+      
+       <button (click)="toggleEditMode()" >Edit Profile</button>
+      <button (click)="fileInput.click()" class="edit-btn"> Edit Photo</button>
+      
+    <input #fileInput type="file" style="display: none"  (change)="handlePhotoChange($event)">
+    </div>
+  </div>
+  
+ 
+    <div *ngIf="editMode">
+      <h2>Edit Profile</h2>
+      <input type="text" [(ngModel)]="user.name" placeholder="Name" required>
+  <input type="email" [(ngModel)]="user.email" placeholder="Email" required>
+  <input type="text" [(ngModel)]="user.country" placeholder="Country" required>
+  <input type="tel" [(ngModel)]="user.mobile" placeholder="Mobile No" required>
+  <input type="text" [(ngModel)]="user.tags" placeholder="Tags" required>
+     
+      <button (click)="saveChanges()">Save</button>
+      <button (click)="cancelEdit()">Cancel</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="agree-info">
+
+        <p>I'm {{ user.name }} and Im above {{user.age}}years and you can send your emails to
+          <span style="color: #2491e4;"> {{ user.email }}</span> I live in the state of {{user.country}}. I like to play {{user.tags}}
+           . And please send me newsletters. Please reach out to me on {{user.mobile}}</p>
+        <p></p>
+
+        <div class="agree-btn">
+            <button type="submit">Agree</button>
+        </div>
+        </div>
+</div>
+ 
+
+ <app-footer></app-footer> 
